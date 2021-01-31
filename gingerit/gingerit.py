@@ -21,8 +21,8 @@ class GingerIt(object):
                 "apiKey": self.api_key,
                 "clientVersion": self.api_version,
                 "text": text,
-                "verify": verify
             },
+            verify=verify
         )
         data = request.json()
         return self._process_data(text, data)
@@ -30,7 +30,8 @@ class GingerIt(object):
     @staticmethod
     def _change_char(original_text, from_position, to_position, change_with):
         return "{}{}{}".format(
-            original_text[:from_position], change_with, original_text[to_position + 1 :]
+            original_text[:from_position], change_with,
+            original_text[to_position + 1:]
         )
 
     def _process_data(self, text, data):
@@ -48,7 +49,7 @@ class GingerIt(object):
                 corrections.append(
                     {
                         "start": start,
-                        "text": text[start : end + 1],
+                        "text": text[start: end + 1],
                         "correct": suggest.get("Text", None),
                         "definition": suggest.get("Definition", None),
                     }
