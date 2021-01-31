@@ -12,7 +12,7 @@ class GingerIt(object):
         self.api_version = "2.0"
         self.lang = "US"
 
-    def parse(self, text):
+    def parse(self, text, verify=True):
         session = requests.Session()
         request = session.get(
             self.url,
@@ -21,6 +21,7 @@ class GingerIt(object):
                 "apiKey": self.api_key,
                 "clientVersion": self.api_version,
                 "text": text,
+                "verify": verify
             },
         )
         data = request.json()
