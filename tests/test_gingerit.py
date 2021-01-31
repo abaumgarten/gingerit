@@ -18,11 +18,13 @@ from gingerit.gingerit import GingerIt
                 },
                 {
                     "start": 13,
-                    "definition": u"a plant cultivated for its blooms or blossoms",
+                    "definition": u"a plant cultivated for its "
+                                  u"blooms or blossoms",
                     "correct": u"flowers",
                     "text": "fliwers",
                 },
-                {"start": 4, "definition": None, "correct": u"smell", "text": "smelt"},
+                {"start": 4, "definition": None, "correct": u"smell",
+                 "text": "smelt"},
             ],
         ),
         (
@@ -31,11 +33,13 @@ from gingerit.gingerit import GingerIt
             [
                 {
                     "start": 16,
-                    "definition": u"affected by an impairment of normal physical or mental function",
+                    "definition": u"affected by an impairment of normal"
+                                  u" physical or mental function",
                     "correct": u"sick",
                     "text": "sck",
                 },
-                {"start": 8, "definition": None, "correct": u"was", "text": "will be"},
+                {"start": 8, "definition": None, "correct": u"was",
+                 "text": "will be"},
             ],
         ),
         ("Edwards was sick yesterday.", "Edwards was sick yesterday.", []),
